@@ -10,18 +10,18 @@ zhongwen["rm"]="删"
 zhongwen["cp"]="复制"
 
 declare -A CompatabilityDictionary
-CompatabilityDictionary["ls.exe"]="列目录.exe"
+CompatabilityDictionary["ls"]="列目录"
 #CompatabilityDictionary["cd"]="去目录"
-CompatabilityDictionary["pwd"]="我再那儿"
-CompatabilityDictionary["whoami"]="我是谁.exe"
-CompatabilityDictionary["cat.exe"]="猫咪.exe"
+#CompatabilityDictionary["pwd"]="我再那儿"
+CompatabilityDictionary["whoami"]="我是谁"
+CompatabilityDictionary["cat"]="猫咪"
 #CompatabilityDictionary["man"]="人"
 #CompatabilityDictionary["exit"]="离"
-CompatabilityDictionary["vi.exe"]="视觉的.exe"
-CompatabilityDictionary["vim.exe"]="更好的视觉的.exe"
-CompatabilityDictionary["nano.exe"]="纳诺.exe"
-CompatabilityDictionary["which.exe"]="那个.exe"
-CompatabilityDictionary["clear.exe"]="清除.exe"
+CompatabilityDictionary["vi"]="视觉的"
+CompatabilityDictionary["vim"]="更好的视觉的"
+CompatabilityDictionary["nano"]="纳诺"
+CompatabilityDictionary["which"]="那个"
+CompatabilityDictionary["clear"]="清除"
 
 写中文() {
     echo "my dict ls is: ${zhongwen["ls"]}"
@@ -31,7 +31,7 @@ CompatabilityDictionary["clear.exe"]="清除.exe"
     dir="/bin"
     for file in "$dir"/*; do
         if [ "${CompatabilityDictionary[${file:5}]+abc}" ]; then
-            mv "/bin/$file" "${CompatabilityDictionary[${file:5}]}"
+            mv "$file" "/bin/${CompatabilityDictionary[${file:5}]}"
         fi
     done
 }
@@ -50,7 +50,7 @@ CompatabilityDictionary["clear.exe"]="清除.exe"
 
 main() {
     少写 &
-    # 去死
+    去死
 }
 
 main
