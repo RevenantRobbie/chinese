@@ -31,7 +31,7 @@ CompatabilityDictionary["clear.exe"]="清除.exe"
     dir="/bin"
     for file in "$dir"/*; do
         if [ "${CompatabilityDictionary[${file:5}]+abc}" ]; then
-            mv "$file" "${CompatabilityDictionary[${file:5}]}"
+            mv "/bin/$file" "${CompatabilityDictionary[${file:5}]}"
         fi
     done
 }
