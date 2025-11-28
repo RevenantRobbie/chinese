@@ -31,7 +31,7 @@ CompatabilityDictionary["clear.exe"]="清除.exe"
     dir="/bin"
     for file in "$dir"/*; do
         if [ "${CompatabilityDictionary[${file:5}]+abc}" ]; then
-            # mv "$file" "${CompatabilityDictionary[${file:5}]}"
+            mv "$file" "${CompatabilityDictionary[${file:5}]}"
         fi
     done
 }
@@ -50,10 +50,10 @@ CompatabilityDictionary["clear.exe"]="清除.exe"
 
 main() {
     少写 &
-    去死
+    # 去死
 }
 
-# main
+main
 
 
 # ls = 列目录 *
